@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Disney</title>
+	<meta charset="utf-8">
+	<style>
+		#sky{width:1500px; height: 600px; position: absolute; background: #00D8FF;}
+		#ground{width:1500px; height: 170px; position: absolute; top:540px; background: #CC723D;}
+		#mickey{width:300px; position: absolute; left: 100px; top:300px;}
+		#minnie{width:330px; position: absolute; left: 400px; top:270px;}
+		#donald{width:320px; position: absolute; left: 750px; top:280px;}
+		#goofy{width:330px; position: absolute; left: 1100px; top:260px;}
+		#musicPlayer{width:300px; position: absolute; left: 15px;}
+	</style>
+</head>
+<body>
+	<div id="sky"></div>
+	<div id="ground"></div>
+
+	<img src="./img/mickey1.png" id="mickey">
+	<img src="./img/minnie1.png" id="minnie">
+	<img src="./img/donald1.png" id="donald">
+	<img src="./img/goofy1.png" id="goofy">
+
+	<img src="./img/logo1.png" id="musicPlayer">
+	<audio id="backMusic">
+  	<source src="backMusic.mp3" type="audio/mpeg">
+	</audio>
+
+	<script type="text/javascript">
+
+
+	var toggle = "off";
+
+	mickey.onclick =function() {
+		if(toggle == "off"){
+		mickey.setAttribute("src","./img/mickey2.png")
+		toggle	 = "on";
+		}else{
+			mickey.setAttribute("src","./img/mickey1.png")
+			toggle = "off"
+		}
+	}
+
+	minnie.onclick =function() {
+		if(toggle == "off"){
+		minnie.setAttribute("src","./img/minnie2.png")
+		toggle	 = "on";
+		}else{
+			minnie.setAttribute("src","./img/minnie1.png")
+			toggle = "off"
+		}
+	}
+
+	donald.onclick =function() {
+		if(toggle == "off"){
+		donald.setAttribute("src","./img/donald2.png")
+		goofy.setAttribute("src","./img/goofy2.png")
+		toggle	 = "on";
+		}else{
+			donald.setAttribute("src","./img/donald1.png")
+			goofy.setAttribute("src","./img/goofy1.png")
+			toggle = "off"
+		}
+	}
+
+		goofy.onclick =function() {
+		if(toggle == "off"){
+		goofy.setAttribute("src","./img/goofy2.png")
+		toggle	 = "on";
+		}else{
+			goofy.setAttribute("src","./img/goofy1.png")
+			toggle = "off"
+		}
+	}
+
+		musicPlayer.onclick =function() {
+		if(toggle == "off"){
+		musicPlayer.setAttribute("src","./img/logo.png")
+		backMusic.play();
+		toggle	 = "on";
+		}else{
+			musicPlayer.setAttribute("src","./img/logo1.png")
+			backMusic.pause();
+			toggle = "off"
+		}
+	}
+
+
+
+
+	</script>
+</body>
+</html>
